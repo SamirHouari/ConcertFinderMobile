@@ -155,8 +155,10 @@
     // Create the fetch request for the entity.
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
+    //Uncomment when working
+    //NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:self.managedObjectContext];
+    //this too
+    //[fetchRequest setEntity:entity];
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
@@ -173,16 +175,17 @@
     aFetchedResultsController.delegate = self;
     self.fetchedResultsController = aFetchedResultsController;
     
-	NSError *error = nil;
-	if (![self.fetchedResultsController performFetch:&error]) {
+    // uncomment when core data
+	//NSError *error = nil;
+	//if (![self.fetchedResultsController performFetch:&error]) {
 	    /*
 	     Replace this implementation with code to handle the error appropriately.
 
 	     abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
 	     */
-	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-	    abort();
-	}
+	  //  NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+	   // abort();
+	//}
     
     return __fetchedResultsController;
 }    
@@ -258,23 +261,25 @@
     // Create a new instance of the entity managed by the fetched results controller.
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+     // uncomment when core data
+   // NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
     
     // If appropriate, configure the new managed object.
     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+   // [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
     
+     // uncomment when core data
     // Save the context.
-    NSError *error = nil;
-    if (![context save:&error]) {
+  //  NSError *error = nil;
+    //if (![context save:&error]) {
         /*
          Replace this implementation with code to handle the error appropriately.
          
          abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
          */
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
+      //  NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        //abort();
+    //}
 }
 
 @end
