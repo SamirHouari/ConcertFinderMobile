@@ -17,13 +17,11 @@
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    CFinderMasterViewController *controller = (CFinderMasterViewController *)navigationController.topViewController;
-    //Uncomment When Coredata
-    //  controller.managedObjectContext = self.managedObjectContext;
+    
     return YES;
 }
 							

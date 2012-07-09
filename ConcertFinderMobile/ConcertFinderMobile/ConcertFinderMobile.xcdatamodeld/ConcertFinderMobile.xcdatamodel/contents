@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="10K549" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Event" syncable="YES">
+    <entity name="Event" representedClassName="Event" syncable="YES">
+        <attribute name="cp" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="date_begin" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="date_end" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="img" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="ev_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fav" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="img" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pays" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="titre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ville" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <fetchRequest name="concert" entity="Event" predicateString="type == &quot;Concert&quot;"/>
+    <fetchRequest name="favconcert" entity="Event" predicateString="type == &quot;Concert&quot; AND fav == 1"/>
+    <fetchRequest name="favfestival" entity="Event" predicateString="ville == &quot;Festival&quot; AND fav == 1"/>
+    <fetchRequest name="favspectacle" entity="Event" predicateString="type == &quot;Spectacle&quot; AND fav == 1"/>
+    <fetchRequest name="festival" entity="Event" predicateString="type == &quot;Festival&quot;"/>
+    <fetchRequest name="spectacle" entity="Event" predicateString="type == &quot;Spectacle&quot;"/>
     <elements>
-        <element name="Event" positionX="261" positionY="189" width="128" height="120"/>
+        <element name="Event" positionX="261" positionY="189" width="128" height="270"/>
     </elements>
 </model>

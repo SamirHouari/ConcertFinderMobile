@@ -10,4 +10,8 @@
 
 @interface FavConcertViewController : UITableViewController
 
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) NSMutableArray *eventsArray;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
 @end

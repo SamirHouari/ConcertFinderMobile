@@ -8,9 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		18049B4C15825A630070FFEB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18049B4B15825A630070FFEB /* CoreLocation.framework */; };
+		1842E7D5158BA62800CB054B /* TabCOntroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842E7D4158BA62800CB054B /* TabCOntroller.m */; };
+		1842E7D9158BA83500CB054B /* MasterTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842E7D8158BA83500CB054B /* MasterTabController.m */; };
+		185003C615AB81E80049E44B /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 185003C515AB81E80049E44B /* Event.m */; };
 		1853BAB915879E3B007F63E7 /* FavFestivalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1853BAB815879E3B007F63E7 /* FavFestivalViewController.m */; };
 		1853BABD15879E4B007F63E7 /* FavConcertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1853BABC15879E4B007F63E7 /* FavConcertViewController.m */; };
 		1853BAC015879E6C007F63E7 /* FavSpectacleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1853BABF15879E6C007F63E7 /* FavSpectacleViewController.m */; };
+		18B2F1911588E2EC001659A5 /* theater-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B2F1901588E2EC001659A5 /* theater-icon.png */; };
+		18B2F1931588E4D0001659A5 /* microphone-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B2F1921588E4D0001659A5 /* microphone-icon.png */; };
+		18B2F1951588E4FD001659A5 /* guitar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B2F1941588E4FD001659A5 /* guitar-icon.png */; };
+		18B2F1E415890791001659A5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B2F1E315890791001659A5 /* MobileCoreServices.framework */; };
+		18B2F1E61589079F001659A5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B2F1E51589079F001659A5 /* SystemConfiguration.framework */; };
+		18B2F1E8158907A9001659A5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B2F1E7158907A9001659A5 /* CFNetwork.framework */; };
+		18B2F1EA158907B5001659A5 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B2F1E9158907B5001659A5 /* libz.1.1.3.dylib */; };
 		18D1278615683115007EBE28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D1278515683115007EBE28 /* UIKit.framework */; };
 		18D1278815683115007EBE28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D1278715683115007EBE28 /* Foundation.framework */; };
 		18D1278A15683115007EBE28 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D1278915683115007EBE28 /* CoreGraphics.framework */; };
@@ -30,12 +40,25 @@
 
 /* Begin PBXFileReference section */
 		18049B4B15825A630070FFEB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1842E7D3158BA62800CB054B /* TabCOntroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabCOntroller.h; sourceTree = "<group>"; };
+		1842E7D4158BA62800CB054B /* TabCOntroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabCOntroller.m; sourceTree = "<group>"; };
+		1842E7D7158BA83500CB054B /* MasterTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterTabController.h; sourceTree = "<group>"; };
+		1842E7D8158BA83500CB054B /* MasterTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterTabController.m; sourceTree = "<group>"; };
+		185003C415AB81E80049E44B /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		185003C515AB81E80049E44B /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		1853BAB715879E3B007F63E7 /* FavFestivalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavFestivalViewController.h; sourceTree = "<group>"; };
 		1853BAB815879E3B007F63E7 /* FavFestivalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavFestivalViewController.m; sourceTree = "<group>"; };
 		1853BABB15879E4B007F63E7 /* FavConcertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavConcertViewController.h; sourceTree = "<group>"; };
 		1853BABC15879E4B007F63E7 /* FavConcertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavConcertViewController.m; sourceTree = "<group>"; };
 		1853BABE15879E6C007F63E7 /* FavSpectacleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavSpectacleViewController.h; sourceTree = "<group>"; };
 		1853BABF15879E6C007F63E7 /* FavSpectacleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavSpectacleViewController.m; sourceTree = "<group>"; };
+		18B2F1901588E2EC001659A5 /* theater-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "theater-icon.png"; sourceTree = "<group>"; };
+		18B2F1921588E4D0001659A5 /* microphone-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microphone-icon.png"; sourceTree = "<group>"; };
+		18B2F1941588E4FD001659A5 /* guitar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guitar-icon.png"; sourceTree = "<group>"; };
+		18B2F1E315890791001659A5 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		18B2F1E51589079F001659A5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		18B2F1E7158907A9001659A5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		18B2F1E9158907B5001659A5 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		18D1278115683115007EBE28 /* ConcertFinderMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcertFinderMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D1278515683115007EBE28 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		18D1278715683115007EBE28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,6 +90,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B2F1EA158907B5001659A5 /* libz.1.1.3.dylib in Frameworks */,
+				18B2F1E8158907A9001659A5 /* CFNetwork.framework in Frameworks */,
+				18B2F1E61589079F001659A5 /* SystemConfiguration.framework in Frameworks */,
+				18B2F1E415890791001659A5 /* MobileCoreServices.framework in Frameworks */,
 				18049B4C15825A630070FFEB /* CoreLocation.framework in Frameworks */,
 				18D1278615683115007EBE28 /* UIKit.framework in Frameworks */,
 				18D1278815683115007EBE28 /* Foundation.framework in Frameworks */,
@@ -78,17 +105,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1853BAC115879F76007F63E7 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
-			sourceTree = "<group>";
-		};
 		18D1277615683115007EBE28 = {
 			isa = PBXGroup;
 			children = (
-				18049B4B15825A630070FFEB /* CoreLocation.framework */,
 				18D1278D15683115007EBE28 /* ConcertFinderMobile */,
 				18D1278415683115007EBE28 /* Frameworks */,
 				18D1278215683115007EBE28 /* Products */,
@@ -106,6 +125,11 @@
 		18D1278415683115007EBE28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18B2F1E9158907B5001659A5 /* libz.1.1.3.dylib */,
+				18B2F1E7158907A9001659A5 /* CFNetwork.framework */,
+				18B2F1E51589079F001659A5 /* SystemConfiguration.framework */,
+				18B2F1E315890791001659A5 /* MobileCoreServices.framework */,
+				18049B4B15825A630070FFEB /* CoreLocation.framework */,
 				18D1278515683115007EBE28 /* UIKit.framework */,
 				18D1278715683115007EBE28 /* Foundation.framework */,
 				18D1278915683115007EBE28 /* CoreGraphics.framework */,
@@ -118,17 +142,22 @@
 			isa = PBXGroup;
 			children = (
 				18D6A1841587A05A00003CEE /* img */,
-				1853BAC115879F76007F63E7 /* New Group */,
 				18D91626158796E90023AFD7 /* FestivalViewController.m */,
 				18D91625158796E90023AFD7 /* FestivalViewController.h */,
 				18D1279615683115007EBE28 /* CFinderAppDelegate.h */,
 				18D1279715683115007EBE28 /* CFinderAppDelegate.m */,
+				1842E7D7158BA83500CB054B /* MasterTabController.h */,
+				1842E7D8158BA83500CB054B /* MasterTabController.m */,
 				18D1279915683115007EBE28 /* MainStoryboard.storyboard */,
 				18D1279F15683115007EBE28 /* CFinderMasterViewController.h */,
+				1842E7D3158BA62800CB054B /* TabCOntroller.h */,
+				1842E7D4158BA62800CB054B /* TabCOntroller.m */,
 				18D127A015683115007EBE28 /* CFinderMasterViewController.m */,
 				18D127A215683115007EBE28 /* CFinderDetailViewController.h */,
 				18D127A315683115007EBE28 /* CFinderDetailViewController.m */,
 				18D1279C15683115007EBE28 /* ConcertFinderMobile.xcdatamodeld */,
+				185003C415AB81E80049E44B /* Event.h */,
+				185003C515AB81E80049E44B /* Event.m */,
 				18D1278E15683115007EBE28 /* Supporting Files */,
 				18D91621158796C10023AFD7 /* ConcertViewController.h */,
 				18D91622158796C10023AFD7 /* ConcertViewController.m */,
@@ -158,6 +187,9 @@
 		18D6A1841587A05A00003CEE /* img */ = {
 			isa = PBXGroup;
 			children = (
+				18B2F1941588E4FD001659A5 /* guitar-icon.png */,
+				18B2F1921588E4D0001659A5 /* microphone-icon.png */,
+				18B2F1901588E2EC001659A5 /* theater-icon.png */,
 				18D6A1851587A05A00003CEE /* heart-empty-icon.png */,
 			);
 			path = img;
@@ -217,6 +249,9 @@
 				18D1279215683115007EBE28 /* InfoPlist.strings in Resources */,
 				18D1279B15683115007EBE28 /* MainStoryboard.storyboard in Resources */,
 				18D6A1861587A05A00003CEE /* heart-empty-icon.png in Resources */,
+				18B2F1911588E2EC001659A5 /* theater-icon.png in Resources */,
+				18B2F1931588E4D0001659A5 /* microphone-icon.png in Resources */,
+				18B2F1951588E4FD001659A5 /* guitar-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +273,9 @@
 				1853BAB915879E3B007F63E7 /* FavFestivalViewController.m in Sources */,
 				1853BABD15879E4B007F63E7 /* FavConcertViewController.m in Sources */,
 				1853BAC015879E6C007F63E7 /* FavSpectacleViewController.m in Sources */,
+				1842E7D5158BA62800CB054B /* TabCOntroller.m in Sources */,
+				1842E7D9158BA83500CB054B /* MasterTabController.m in Sources */,
+				185003C615AB81E80049E44B /* Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

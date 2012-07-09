@@ -12,6 +12,17 @@
 
 @property (strong, nonatomic) id detailItem;
 
-@property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (nonatomic, strong) UILabel *titleLabel;
+
+@property (nonatomic, strong) UIImageView *articleImageView;
+
+@property (nonatomic, strong) UILabel* metaLabel;
+
+@property (nonatomic, strong) UILabel* nameLabel;
+
+@property (nonatomic, strong) UIWebView* articleWebView;
+
+@property (nonatomic, strong) UIScrollView* scrollView;
+
 
 @end

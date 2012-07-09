@@ -10,9 +10,10 @@
 
 #import <CoreData/CoreData.h>
 
-@interface CFinderMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface CFinderMasterViewController : UITableViewController
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) NSURL                    *urlserv;
 
 @end

@@ -14,28 +14,23 @@
 
 @implementation CFinderDetailViewController
 
-@synthesize detailItem = _detailItem;
-@synthesize detailDescriptionLabel = _detailDescriptionLabel;
+@synthesize titleLabel, articleWebView, articleImageView, metaLabel, nameLabel, scrollView;
+@synthesize detailItem;
 
 #pragma mark - Managing the detail item
 
 - (void)setDetailItem:(id)newDetailItem
 {
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
         
         // Update the view.
-        [self configureView];
-    }
+    [self configureView];
 }
 
 - (void)configureView
 {
     // Update the user interface for the detail item.
 
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
-    }
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,6 +44,33 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    [self.view addSubview:scrollView];
+    
+    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 300, 61)];
+    [titleLabel setFont:[UIFont boldSystemFontOfSize:20]];
+    [titleLabel setNumberOfLines:2];
+    [scrollView addSubview:titleLabel];
+    self.articleImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 58, 320, 109)];
+    [articleImageView setContentMode:UIViewContentModeScaleAspectFill];
+    [articleImageView setClipsToBounds:YES];
+    [scrollView addSubview:articleImageView];
+    self.nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 169, 170, 21)];
+    [nameLabel setFont:[UIFont systemFontOfSize:13]];
+    [nameLabel setText:@"By John Doe / Posted under: "];
+    [scrollView addSubview:nameLabel];
+    
+    self.metaLabel = [[UILabel alloc] initWithFrame:CGRectMake(183, 169, 117, 21)];
+    [metaLabel setFont:[UIFont systemFontOfSize:13]];
+    [metaLabel setTextColor:[UIColor colorWithRed:30.0/255 green:144.0/255 blue:224.0/255 alpha:1.0]];
+    [scrollView addSubview:metaLabel];
+    
+    self.articleWebView = [[UIWebView alloc] initWithFrame:CGRectMake(10, 204, 300, 700)];
+    [scrollView addSubview:articleWebView];
+    
+    UIView* dividerView = [[UIView alloc] initWithFrame:CGRectMake(10, 194, 300, 2)];
+    [dividerView setBackgroundColor:[UIColor lightGrayColor]];
+    [scrollView addSubview:dividerView];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
 }

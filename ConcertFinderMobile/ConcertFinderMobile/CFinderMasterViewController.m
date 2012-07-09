@@ -10,6 +10,8 @@
 
 #import "CFinderDetailViewController.h"
 
+@class Event;
+
 @interface CFinderMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
@@ -18,6 +20,7 @@
 
 @synthesize fetchedResultsController = __fetchedResultsController;
 @synthesize managedObjectContext = __managedObjectContext;
+@synthesize urlserv = __urlserv;
 
 - (void)awakeFromNib
 {
@@ -37,10 +40,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     // Set up the edit and add buttons.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    __urlserv =[[NSURL alloc]initWithString:@"http://79.87.25.142:6060/ConcertFinderMVC/ConcertFinderService.asmx/GetXEvents"];
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
-    self.navigationItem.rightBarButtonItem = addButton;
 }
 
 - (void)viewDidUnload
@@ -156,15 +157,16 @@
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
     //Uncomment when working
-    //NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:self.managedObjectContext];
     //this too
-    //[fetchRequest setEntity:entity];
-    
+    [fetchRequest setEntity:entity];
+    NSFetchRequest *fetchconcert = [[NSFetchRequest alloc] initWithEntityName:@"Event"];
+    [fetchconcert setFetchLimit:10];
     // Set the batch size to a suitable number.
-    [fetchRequest setFetchBatchSize:20];
+    [fetchRequest setFetchBatchSize:10];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"titre" ascending:NO];
     NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -176,16 +178,16 @@
     self.fetchedResultsController = aFetchedResultsController;
     
     // uncomment when core data
-	//NSError *error = nil;
-	//if (![self.fetchedResultsController performFetch:&error]) {
+	NSError *error = nil;
+	if (![self.fetchedResultsController performFetch:&error]) {
 	    /*
 	     Replace this implementation with code to handle the error appropriately.
 
 	     abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
 	     */
-	  //  NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-	   // abort();
-	//}
+	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+	    abort();
+	}
     
     return __fetchedResultsController;
 }    
@@ -256,11 +258,11 @@
     cell.textLabel.text = [[managedObject valueForKey:@"timeStamp"] description];
 }
 
-- (void)insertNewObject
-{
+//- (void)insertNewObject
+//{
     // Create a new instance of the entity managed by the fetched results controller.
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
+   // NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    //NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
      // uncomment when core data
    // NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
     
@@ -280,6 +282,6 @@
       //  NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         //abort();
     //}
-}
+//}
 
 @end
