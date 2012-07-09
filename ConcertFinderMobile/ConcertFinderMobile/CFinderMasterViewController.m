@@ -41,7 +41,20 @@
 	// Do any additional setup after loading the view, typically from a nib.
     // Set up the edit and add buttons.
     __urlserv =[[NSURL alloc]initWithString:@"http://79.87.25.142:6060/ConcertFinderMVC/ConcertFinderService.asmx/GetXEvents"];
+   /* 
+    //create new event
+    Event *e = (Event *)[NSEntityDescription insertNewObjectForEntityForName:@"Event" inManagedObjectContext:__managedObjectContext];
+    //fill it
+    [e setName:self.BirdNameInput.text];
+    [e setLocation:self.locationInput.text];
+    [e setDate:[NSDate date]];
+    //error managing
+    NSError *error = nil;
+    if (![_managedObjectContext save:&error]) {
+        // Handle the error.
+    }
 
+*/
 }
 
 - (void)viewDidUnload
@@ -255,7 +268,7 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[managedObject valueForKey:@"timeStamp"] description];
+    cell.textLabel.text = [[managedObject valueForKey:@"type"] description];
 }
 
 //- (void)insertNewObject
