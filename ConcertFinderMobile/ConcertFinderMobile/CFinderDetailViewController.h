@@ -7,22 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Event.h"
 
-@interface CFinderDetailViewController : UIViewController
+@interface CFinderDetailViewController : UIViewController <NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) id detailItem;
 
 @property (nonatomic, strong) UILabel *titleLabel;
 
-@property (nonatomic, strong) UIImageView *articleImageView;
+@property (nonatomic, strong) UIImageView *eventImage;
 
-@property (nonatomic, strong) UILabel* metaLabel;
+@property (nonatomic, strong) UILabel* descLabel;
 
-@property (nonatomic, strong) UILabel* nameLabel;
+@property (nonatomic, strong) UILabel* locationLabel;
 
-@property (nonatomic, strong) UIWebView* articleWebView;
+@property (strong, nonatomic) Event *detailevent;
 
-@property (nonatomic, strong) UIScrollView* scrollView;
-
+@property (nonatomic, strong) UILabel* dateLabel;
 
 @end

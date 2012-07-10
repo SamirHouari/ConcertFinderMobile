@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SpectacleViewController : UITableViewController
+@interface SpectacleViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, strong) NSMutableArray *eventsArray;

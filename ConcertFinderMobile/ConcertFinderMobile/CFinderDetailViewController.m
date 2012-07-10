@@ -7,6 +7,7 @@
 //
 
 #import "CFinderDetailViewController.h"
+#import "Event.h"
 
 @interface CFinderDetailViewController ()
 - (void)configureView;
@@ -14,8 +15,13 @@
 
 @implementation CFinderDetailViewController
 
-@synthesize titleLabel, articleWebView, articleImageView, metaLabel, nameLabel, scrollView;
+@synthesize titleLabel;
+@synthesize dateLabel;
+@synthesize locationLabel;
+@synthesize eventImage;
+@synthesize descLabel;
 @synthesize detailItem;
+@synthesize detailevent;
 
 #pragma mark - Managing the detail item
 
@@ -29,7 +35,23 @@
 - (void)configureView
 {
     // Update the user interface for the detail item.
-
+    Event *e =(Event *) detailItem;
+    
+    titleLabel.text = [e name];
+    dateLabel.text = [NSString stringWithFormat:@"%@ : %@",
+                      [e date_begin],
+                      [e date_end]];
+    locationLabel.text = [NSString stringWithFormat:@"%@ : %@ : %@",
+                          [e rue],
+                          [e ville],
+                          [e pays]];
+    descLabel.text = [e desc];
+    
+    
+    //NSData *d = [[NSData alloc] i];
+    //UIImage *img = [[UIImage alloc] initWithData:<#(NSData *)#>];
+    //[[eventImage initWithImage:<#(UIImage *)#>]];
+    
 
 }
 
@@ -44,7 +66,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+  /*  self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
     [self.view addSubview:scrollView];
     
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 300, 61)];
@@ -70,7 +92,7 @@
     
     UIView* dividerView = [[UIView alloc] initWithFrame:CGRectMake(10, 194, 300, 2)];
     [dividerView setBackgroundColor:[UIColor lightGrayColor]];
-    [scrollView addSubview:dividerView];
+    [scrollView addSubview:dividerView];*/
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
 }
@@ -106,6 +128,15 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+- (void)setDetailevent:(Event *)newdetailevent 
+{
+    if (detailevent != newdetailevent) {
+        detailevent = newdetailevent;
+        // Update the view.
+        [self configureView];
+    }
 }
 
 @end

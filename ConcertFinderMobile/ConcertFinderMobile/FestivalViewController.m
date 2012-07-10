@@ -9,6 +9,7 @@
 #import "FestivalViewController.h"
 #import "Event.h"
 #import "CFinderAppDelegate.h"
+#import "CFinderDetailViewController.h"
 
 @class Event;
 @implementation FestivalViewController
@@ -228,5 +229,13 @@
 {
     NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = [[managedObject valueForKey:@"name"] description];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"fsegue"]) {
+        CFinderDetailViewController *detailViewController = [segue destinationViewController];
+        [detailViewController setDetailItem:[eventsArray objectAtIndex:[self.tableView indexPathForSelectedRow].row]];
+    }
 }
 @end

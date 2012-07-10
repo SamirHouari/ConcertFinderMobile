@@ -66,7 +66,7 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Festival" image="guitar-icon.png" id="aHr-lR-hBe"/>
                     <connections>
-                        <segue destination="tVx-IQ-Eul" kind="push" identifier="detail" id="EHG-u5-KJE"/>
+                        <segue destination="tVx-IQ-Eul" kind="push" identifier="fsegue" id="EHG-u5-KJE"/>
                     </connections>
                 </tableViewController>
             </objects>
@@ -122,7 +122,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Spectacle" image="theater-icon.png" id="bO9-IK-0cm"/>
                     <connections>
-                        <segue destination="tVx-IQ-Eul" kind="push" identifier="detail" id="1gB-FM-G1C"/>
+                        <segue destination="tVx-IQ-Eul" kind="push" identifier="ssegue" id="1gB-FM-G1C"/>
                     </connections>
                 </viewController>
             </objects>
@@ -195,7 +195,7 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Concert" image="microphone-icon.png" id="0gn-wd-x9k"/>
                     <connections>
-                        <segue destination="tVx-IQ-Eul" kind="push" identifier="detail" id="weC-jl-W48"/>
+                        <segue destination="tVx-IQ-Eul" kind="push" identifier="fcsegue" id="weC-jl-W48"/>
                     </connections>
                 </tableViewController>
             </objects>
@@ -248,7 +248,7 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Festival" image="guitar-icon.png" id="ib1-sQ-Ep5"/>
                     <connections>
-                        <segue destination="tVx-IQ-Eul" kind="push" identifier="detail" id="Dcn-98-yDu"/>
+                        <segue destination="tVx-IQ-Eul" kind="push" identifier="ffsegue" id="Dcn-98-yDu"/>
                     </connections>
                 </tableViewController>
             </objects>
@@ -301,7 +301,7 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Spectacle" image="theater-icon.png" id="wQI-Wt-1C8"/>
                     <connections>
-                        <segue destination="tVx-IQ-Eul" kind="push" identifier="detail" id="AnL-t5-9pI"/>
+                        <segue destination="tVx-IQ-Eul" kind="push" identifier="fssegue" id="AnL-t5-9pI"/>
                     </connections>
                 </tableViewController>
             </objects>
@@ -357,7 +357,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Concert" image="microphone-icon.png" id="gOo-Kf-Eed"/>
                     <connections>
-                        <segue destination="tVx-IQ-Eul" kind="push" identifier="detail" id="q2h-sS-frP"/>
+                        <segue destination="tVx-IQ-Eul" kind="push" identifier="csegue" id="q2h-sS-frP"/>
                     </connections>
                 </viewController>
             </objects>
@@ -366,7 +366,7 @@
         <scene sceneID="DyR-Ea-bnK">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tbv-aC-Eb3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="tVx-IQ-Eul" sceneMemberID="viewController">
+                <viewController id="tVx-IQ-Eul" customClass="CFinderDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EOo-Re-OlF">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -383,7 +383,7 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Desc" lineBreakMode="tailTruncation" minimumFontSize="10" id="6JG-ci-u8c">
-                                <rect key="frame" x="20" y="193" width="42" height="21"/>
+                                <rect key="frame" x="20" y="258" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -402,6 +402,13 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="date" lineBreakMode="tailTruncation" minimumFontSize="10" id="eAS-OY-DUu">
                                 <rect key="frame" x="258" y="117" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Location" lineBreakMode="tailTruncation" minimumFontSize="10" id="8Qj-LH-JsB">
+                                <rect key="frame" x="20" y="207" width="66" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -449,6 +456,9 @@
         <image name="theater-icon.png" width="32" height="32"/>
     </resources>
     <classes>
+        <class className="CFinderDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CFinderDetailViewController.h"/>
+        </class>
         <class className="ConcertViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ConcertViewController.h"/>
         </class>
@@ -474,6 +484,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="AnL-t5-9pI"/>
+        <segue reference="Dcn-98-yDu"/>
     </inferredMetricsTieBreakers>
 </document>

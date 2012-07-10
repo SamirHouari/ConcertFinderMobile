@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FavConcertViewController : UITableViewController
+@interface FavConcertViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, strong) NSMutableArray *eventsArray;
