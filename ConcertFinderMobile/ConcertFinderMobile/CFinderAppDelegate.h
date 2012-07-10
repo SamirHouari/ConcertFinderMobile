@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ASIHTTPRequest.h"
+
 @interface CFinderAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
@@ -19,5 +21,10 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+
+- (void)grabURLInBackground;
+- (void)requestFinished:(ASIHTTPRequest *)request;
+- (void)requestFailed:(ASIHTTPRequest *)request;
+
 
 @end

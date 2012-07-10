@@ -18,9 +18,29 @@
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
 
+- (void)grabURLInBackground
+{
+    NSURL *url = [NSURL URLWithString:@"http://192.168.1.86:80/ConcertFinder/ConcertFinderService.asmx/GetXEvents"];
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    [request setDelegate:self];
+    [request startAsynchronous];
+}
+
+- (void)requestFinished:(ASIHTTPRequest *)request
+{
+    NSString *responseString = [request responseString];
+    NSData *responseData = [request responseData];
+}
+
+- (void)requestFailed:(ASIHTTPRequest *)request
+{
+    NSError *error = [request error];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self grabURLInBackground];
     
     return YES;
 }
