@@ -44,6 +44,7 @@
 		CE720D0015ACF44A0066C0C8 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CF315ACF44A0066C0C8 /* ASIHTTPRequest.m */; };
 		CE720D0115ACF44A0066C0C8 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CF715ACF44A0066C0C8 /* ASIInputStream.m */; };
 		CE720D0215ACF44A0066C0C8 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CF915ACF44A0066C0C8 /* ASINetworkQueue.m */; };
+		CE720D0415ACF5FB0066C0C8 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE720D0315ACF5FB0066C0C8 /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +112,7 @@
 		CE720CF815ACF44A0066C0C8 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
 		CE720CF915ACF44A0066C0C8 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
 		CE720CFA15ACF44A0066C0C8 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		CE720D0315ACF5FB0066C0C8 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE720D0415ACF5FB0066C0C8 /* libz.dylib in Frameworks */,
 				18B2F1EA158907B5001659A5 /* libz.1.1.3.dylib in Frameworks */,
 				18B2F1E8158907A9001659A5 /* CFNetwork.framework in Frameworks */,
 				18B2F1E61589079F001659A5 /* SystemConfiguration.framework in Frameworks */,
@@ -136,6 +139,7 @@
 		18D1277615683115007EBE28 = {
 			isa = PBXGroup;
 			children = (
+				CE720D0315ACF5FB0066C0C8 /* libz.dylib */,
 				18D1278D15683115007EBE28 /* ConcertFinderMobile */,
 				18D1278415683115007EBE28 /* Frameworks */,
 				18D1278215683115007EBE28 /* Products */,
