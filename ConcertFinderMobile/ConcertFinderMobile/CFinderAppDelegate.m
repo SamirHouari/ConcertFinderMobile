@@ -9,6 +9,7 @@
 #import "CFinderAppDelegate.h"
 
 #import "CFinderMasterViewController.h"
+#import "Event.h"
 
 @implementation CFinderAppDelegate
 
@@ -172,6 +173,36 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+- (void )updatedb:(NSDictionary *) dict
+{
+    NSArray *content = [dict objectForKey:@"Datas"];
+    // NSLog(@"\n\n\n Desc is: %@ \n\n\n\n\n",[content debugDescription]);
+    int len = [content count];
+    
+        for (int i = 0; i < len; i++) 
+        {
+            NSMutableDictionary* itemdict = [[NSMutableDictionary alloc] initWithDictionary:[content objectAtIndex:i]];
+             Event *e = (Event *)[NSEntityDescription insertNewObjectForEntityForName:@"Event" inManagedObjectContext:__managedObjectContext];
+            e.ev_id = [itemdict objectForKey:@"Id"];
+            e.date_begin = [itemdict objectForKey:@"DateDebut"];
+            e.type = [itemdict objectForKey:@"Type"];
+            e.img = [itemdict objectForKey:@"Image"];
+            e.latitude = [itemdict objectForKey:@"Latitude"];
+            e.longitude = [itemdict objectForKey:@"Longitude"];
+            e.name = [itemdict objectForKey:@"Name"];
+            e.rue = [itemdict objectForKey:@"Rue"];
+            e.ville = [itemdict objectForKey:@"Ville"];
+            e.cp = [itemdict objectForKey:@"CP"];
+            e.pays = [itemdict objectForKey:@"Pays"];
+            NSError *error = nil;
+            if (![__managedObjectContext save:&error]) {
+                // Handle the error.
+                NSLog(@"Problem in adding an object CFFinderAppDelegate");
+            }
+
+        }
 }
 
 @end
