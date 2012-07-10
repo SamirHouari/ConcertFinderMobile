@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18DCFB5115ACD1EA006C7ACA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DCFB5015ACD1EA006C7ACA /* UIKit.framework */; };
+		18DCFB5315ACD1EA006C7ACA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DCFB5215ACD1EA006C7ACA /* Foundation.framework */; };
+		18DCFB5515ACD1EA006C7ACA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DCFB5415ACD1EA006C7ACA /* CoreGraphics.framework */; };
+		18DCFB5715ACD1EA006C7ACA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DCFB5615ACD1EA006C7ACA /* CoreData.framework */; };
+		18DCFB5D15ACD1EA006C7ACA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18DCFB5B15ACD1EA006C7ACA /* InfoPlist.strings */; };
+		18DCFB5F15ACD1EA006C7ACA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCFB5E15ACD1EA006C7ACA /* main.m */; };
+		18DCFB6315ACD1EA006C7ACA /* CFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCFB6215ACD1EA006C7ACA /* CFAppDelegate.m */; };
+		18DCFB6615ACD1EA006C7ACA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DCFB6415ACD1EA006C7ACA /* MainStoryboard.storyboard */; };
+		18DCFB6915ACD1EA006C7ACA /* ConcertFinder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18DCFB6715ACD1EA006C7ACA /* ConcertFinder.xcdatamodeld */; };
+		18DCFB6C15ACD1EA006C7ACA /* CFMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCFB6B15ACD1EA006C7ACA /* CFMasterViewController.m */; };
+		18DCFB6F15ACD1EA006C7ACA /* CFDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCFB6E15ACD1EA006C7ACA /* CFDetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		18DCFB4C15ACD1EA006C7ACA /* ConcertFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcertFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18DCFB5015ACD1EA006C7ACA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		18DCFB5215ACD1EA006C7ACA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		18DCFB5415ACD1EA006C7ACA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		18DCFB5615ACD1EA006C7ACA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		18DCFB5A15ACD1EA006C7ACA /* ConcertFinder-Info.plist */ = {isa = PBXFileReference; path = "ConcertFinder-Info.plist"; sourceTree = "<group>"; };
+		18DCFB5C15ACD1EA006C7ACA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		18DCFB5E15ACD1EA006C7ACA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18DCFB6015ACD1EA006C7ACA /* ConcertFinder-Prefix.pch */ = {isa = PBXFileReference; path = "ConcertFinder-Prefix.pch"; sourceTree = "<group>"; };
+		18DCFB6115ACD1EA006C7ACA /* CFAppDelegate.h */ = {isa = PBXFileReference; path = CFAppDelegate.h; sourceTree = "<group>"; };
+		18DCFB6215ACD1EA006C7ACA /* CFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFAppDelegate.m; sourceTree = "<group>"; };
+		18DCFB6515ACD1EA006C7ACA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		18DCFB6815ACD1EA006C7ACA /* ConcertFinder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ConcertFinder.xcdatamodel; sourceTree = "<group>"; };
+		18DCFB6A15ACD1EA006C7ACA /* CFMasterViewController.h */ = {isa = PBXFileReference; path = CFMasterViewController.h; sourceTree = "<group>"; };
+		18DCFB6B15ACD1EA006C7ACA /* CFMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFMasterViewController.m; sourceTree = "<group>"; };
+		18DCFB6D15ACD1EA006C7ACA /* CFDetailViewController.h */ = {isa = PBXFileReference; path = CFDetailViewController.h; sourceTree = "<group>"; };
+		18DCFB6E15ACD1EA006C7ACA /* CFDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFDetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18DCFB4915ACD1EA006C7ACA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18DCFB5115ACD1EA006C7ACA /* UIKit.framework in Frameworks */,
+				18DCFB5315ACD1EA006C7ACA /* Foundation.framework in Frameworks */,
+				18DCFB5515ACD1EA006C7ACA /* CoreGraphics.framework in Frameworks */,
+				18DCFB5715ACD1EA006C7ACA /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18DCFB4115ACD1E9006C7ACA = {
+			isa = PBXGroup;
+			children = (
+				18DCFB5815ACD1EA006C7ACA /* ConcertFinder */,
+				18DCFB4F15ACD1EA006C7ACA /* Frameworks */,
+				18DCFB4D15ACD1EA006C7ACA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18DCFB4D15ACD1EA006C7ACA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18DCFB4C15ACD1EA006C7ACA /* ConcertFinder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18DCFB4F15ACD1EA006C7ACA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18DCFB5015ACD1EA006C7ACA /* UIKit.framework */,
+				18DCFB5215ACD1EA006C7ACA /* Foundation.framework */,
+				18DCFB5415ACD1EA006C7ACA /* CoreGraphics.framework */,
+				18DCFB5615ACD1EA006C7ACA /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18DCFB5815ACD1EA006C7ACA /* ConcertFinder */ = {
+			isa = PBXGroup;
+			children = (
+				18DCFB6115ACD1EA006C7ACA /* CFAppDelegate.h */,
+				18DCFB6215ACD1EA006C7ACA /* CFAppDelegate.m */,
+				18DCFB6415ACD1EA006C7ACA /* MainStoryboard.storyboard */,
+				18DCFB6A15ACD1EA006C7ACA /* CFMasterViewController.h */,
+				18DCFB6B15ACD1EA006C7ACA /* CFMasterViewController.m */,
+				18DCFB6D15ACD1EA006C7ACA /* CFDetailViewController.h */,
+				18DCFB6E15ACD1EA006C7ACA /* CFDetailViewController.m */,
+				18DCFB6715ACD1EA006C7ACA /* ConcertFinder.xcdatamodeld */,
+				18DCFB5915ACD1EA006C7ACA /* Supporting Files */,
+			);
+			path = ConcertFinder;
+			sourceTree = "<group>";
+		};
+		18DCFB5915ACD1EA006C7ACA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18DCFB5A15ACD1EA006C7ACA /* ConcertFinder-Info.plist */,
+				18DCFB5B15ACD1EA006C7ACA /* InfoPlist.strings */,
+				18DCFB5E15ACD1EA006C7ACA /* main.m */,
+				18DCFB6015ACD1EA006C7ACA /* ConcertFinder-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18DCFB4B15ACD1EA006C7ACA /* ConcertFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18DCFB7215ACD1EA006C7ACA /* Build configuration list for PBXNativeTarget "ConcertFinder" */;
+			buildPhases = (
+				18DCFB4815ACD1EA006C7ACA /* Sources */,
+				18DCFB4915ACD1EA006C7ACA /* Frameworks */,
+				18DCFB4A15ACD1EA006C7ACA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ConcertFinder;
+			productName = ConcertFinder;
+			productReference = 18DCFB4C15ACD1EA006C7ACA /* ConcertFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18DCFB4315ACD1E9006C7ACA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Epita;
+			};
+			buildConfigurationList = 18DCFB4615ACD1E9006C7ACA /* Build configuration list for PBXProject "ConcertFinder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 18DCFB4115ACD1E9006C7ACA;
+			productRefGroup = 18DCFB4D15ACD1EA006C7ACA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18DCFB4B15ACD1EA006C7ACA /* ConcertFinder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18DCFB4A15ACD1EA006C7ACA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18DCFB5D15ACD1EA006C7ACA /* InfoPlist.strings in Resources */,
+				18DCFB6615ACD1EA006C7ACA /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18DCFB4815ACD1EA006C7ACA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18DCFB5F15ACD1EA006C7ACA /* main.m in Sources */,
+				18DCFB6315ACD1EA006C7ACA /* CFAppDelegate.m in Sources */,
+				18DCFB6915ACD1EA006C7ACA /* ConcertFinder.xcdatamodeld in Sources */,
+				18DCFB6C15ACD1EA006C7ACA /* CFMasterViewController.m in Sources */,
+				18DCFB6F15ACD1EA006C7ACA /* CFDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		18DCFB5B15ACD1EA006C7ACA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18DCFB5C15ACD1EA006C7ACA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		18DCFB6415ACD1EA006C7ACA /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18DCFB6515ACD1EA006C7ACA /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18DCFB7015ACD1EA006C7ACA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		18DCFB7115ACD1EA006C7ACA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18DCFB7315ACD1EA006C7ACA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ConcertFinder/ConcertFinder-Prefix.pch";
+				INFOPLIST_FILE = "ConcertFinder/ConcertFinder-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		18DCFB7415ACD1EA006C7ACA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ConcertFinder/ConcertFinder-Prefix.pch";
+				INFOPLIST_FILE = "ConcertFinder/ConcertFinder-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18DCFB4615ACD1E9006C7ACA /* Build configuration list for PBXProject "ConcertFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18DCFB7015ACD1EA006C7ACA /* Debug */,
+				18DCFB7115ACD1EA006C7ACA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18DCFB7215ACD1EA006C7ACA /* Build configuration list for PBXNativeTarget "ConcertFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18DCFB7315ACD1EA006C7ACA /* Debug */,
+				18DCFB7415ACD1EA006C7ACA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		18DCFB6715ACD1EA006C7ACA /* ConcertFinder.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				18DCFB6815ACD1EA006C7ACA /* ConcertFinder.xcdatamodel */,
+			);
+			currentVersion = 18DCFB6815ACD1EA006C7ACA /* ConcertFinder.xcdatamodel */;
+			path = ConcertFinder.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 18DCFB4315ACD1E9006C7ACA /* Project object */;
+}
