@@ -76,7 +76,7 @@
     Event *event = (Event *)[eventsArray objectAtIndex:indexPath.row]; 
     cell.textLabel.text = event.titre;
     NSString *string = [NSString stringWithFormat:@"%@ : %@",
-                        [dateFormatter stringFromDate:[event date_begin]],
+                        [event date_begin],
                         [event ville]]; 
     cell.detailTextLabel.text = string;
     return cell;

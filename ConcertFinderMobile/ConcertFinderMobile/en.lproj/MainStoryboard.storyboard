@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="10K549" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
     <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
         <scene sceneID="11">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
@@ -19,6 +21,7 @@
             </objects>
             <point key="canvasLocation" x="-1" y="64"/>
         </scene>
+        <!--Festival View Controller - Festival-->
         <scene sceneID="i8L-an-0QX">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EDP-um-B4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -72,6 +75,7 @@
             </objects>
             <point key="canvasLocation" x="1039" y="930"/>
         </scene>
+        <!--Spectacle View Controller - Spectacle-->
         <scene sceneID="3Km-0m-QuH">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GU8-Nn-K21" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -128,6 +132,7 @@
             </objects>
             <point key="canvasLocation" x="1039" y="321"/>
         </scene>
+        <!--Tab Bar Controller - Favoris-->
         <scene sceneID="kKJ-hT-70K">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jiX-rt-yPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -148,6 +153,7 @@
             </objects>
             <point key="canvasLocation" x="654" y="-1473"/>
         </scene>
+        <!--Fav Concert View Controller - Concert-->
         <scene sceneID="teZ-bp-cTV">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqt-bl-ESb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -201,6 +207,7 @@
             </objects>
             <point key="canvasLocation" x="1291" y="-2160"/>
         </scene>
+        <!--Fav Festival View Controller - Festival-->
         <scene sceneID="WjN-Wi-Aj8">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zlU-7T-LpL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -254,6 +261,7 @@
             </objects>
             <point key="canvasLocation" x="1301" y="-1473"/>
         </scene>
+        <!--Fav Spectacle View Controller - Spectacle-->
         <scene sceneID="Qcc-DG-UDL">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rXQ-QN-IKs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -307,6 +315,7 @@
             </objects>
             <point key="canvasLocation" x="1309" y="-843"/>
         </scene>
+        <!--Concert View Controller - Concert-->
         <scene sceneID="nhC-kw-J9g">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSS-79-wou" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -363,6 +372,7 @@
             </objects>
             <point key="canvasLocation" x="1039" y="-243"/>
         </scene>
+        <!--Finder Detail View Controller-->
         <scene sceneID="DyR-Ea-bnK">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tbv-aC-Eb3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -394,7 +404,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="name" lineBreakMode="tailTruncation" minimumFontSize="10" id="4sV-VH-CbF">
-                                <rect key="frame" x="258" y="60" width="42" height="21"/>
+                                <rect key="frame" x="0.0" y="64" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -422,6 +432,7 @@
             </objects>
             <point key="canvasLocation" x="2088" y="-103"/>
         </scene>
+        <!--Tab Bar Controller - Event-->
         <scene sceneID="9uX-Ez-hq2">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ch6-mg-ZLf" userLabel="First Responder" sceneMemberID="firstResponder"/>

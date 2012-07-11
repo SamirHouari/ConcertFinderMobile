@@ -21,11 +21,11 @@
 
 - (void)grabURLInBackground
 {
-    NSURL *url = [NSURL URLWithString:@"http://10.41.176.146:80/ConcertFinderMVC/ConcertFinderService.asmx/GetXEvents"];
+    NSURL *url = [NSURL URLWithString:@"http://192.168.1.130:80/ConcertFinderMVC/ConcertFinderService.asmx/GetXEvents"];
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
     [request setDelegate:self];
     [request startAsynchronous];
-    [request setPostValue:@"2" forKey:@"nb_event"];
+    [request setPostValue:@"5" forKey:@"nb_event"];
 }
 
 - (void)requestFinished:(ASIFormDataRequest *)request
