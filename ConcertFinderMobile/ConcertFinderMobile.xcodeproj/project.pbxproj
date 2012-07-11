@@ -36,14 +36,14 @@
 		18D91623158796C10023AFD7 /* ConcertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D91622158796C10023AFD7 /* ConcertViewController.m */; };
 		18D91627158796E90023AFD7 /* FestivalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D91626158796E90023AFD7 /* FestivalViewController.m */; };
 		18D9162A158797010023AFD7 /* SpectacleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D91629158797010023AFD7 /* SpectacleViewController.m */; };
-		CE720CFB15ACF44A0066C0C8 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CE815ACF44A0066C0C8 /* ASIAuthenticationDialog.m */; };
-		CE720CFC15ACF44A0066C0C8 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CEB15ACF44A0066C0C8 /* ASIDataCompressor.m */; };
-		CE720CFD15ACF44A0066C0C8 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CED15ACF44A0066C0C8 /* ASIDataDecompressor.m */; };
-		CE720CFE15ACF44A0066C0C8 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CEF15ACF44A0066C0C8 /* ASIDownloadCache.m */; };
-		CE720CFF15ACF44A0066C0C8 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CF115ACF44A0066C0C8 /* ASIFormDataRequest.m */; };
-		CE720D0015ACF44A0066C0C8 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CF315ACF44A0066C0C8 /* ASIHTTPRequest.m */; };
-		CE720D0115ACF44A0066C0C8 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CF715ACF44A0066C0C8 /* ASIInputStream.m */; };
-		CE720D0215ACF44A0066C0C8 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CF915ACF44A0066C0C8 /* ASINetworkQueue.m */; };
+		CE720CFB15ACF44A0066C0C8 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CE815ACF44A0066C0C8 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CE720CFC15ACF44A0066C0C8 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CEB15ACF44A0066C0C8 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CE720CFD15ACF44A0066C0C8 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CED15ACF44A0066C0C8 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CE720CFE15ACF44A0066C0C8 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CEF15ACF44A0066C0C8 /* ASIDownloadCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CE720CFF15ACF44A0066C0C8 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CF115ACF44A0066C0C8 /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CE720D0015ACF44A0066C0C8 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CF315ACF44A0066C0C8 /* ASIHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CE720D0115ACF44A0066C0C8 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CF715ACF44A0066C0C8 /* ASIInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CE720D0215ACF44A0066C0C8 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CF915ACF44A0066C0C8 /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CE720D0415ACF5FB0066C0C8 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE720D0315ACF5FB0066C0C8 /* libz.dylib */; };
 /* End PBXBuildFile section */
 
