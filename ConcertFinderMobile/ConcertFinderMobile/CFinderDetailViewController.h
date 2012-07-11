@@ -13,16 +13,16 @@
 
 @property (strong, nonatomic) id detailItem;
 
-@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) IBOutlet UILabel *titleLabel;
 
-@property (nonatomic, strong) UIImageView *eventImage;
+@property (nonatomic, strong) IBOutlet UIImageView *eventImage;
 
-@property (nonatomic, strong) UILabel* descLabel;
+@property (nonatomic, strong) IBOutlet UILabel* descLabel;
 
-@property (nonatomic, strong) UILabel* locationLabel;
+@property (nonatomic, strong) IBOutlet UILabel* locationLabel;
 
 @property (strong, nonatomic) Event *detailevent;
 
-@property (nonatomic, strong) UILabel* dateLabel;
+@property (nonatomic, strong) IBOutlet UILabel* dateLabel;
 
 @end

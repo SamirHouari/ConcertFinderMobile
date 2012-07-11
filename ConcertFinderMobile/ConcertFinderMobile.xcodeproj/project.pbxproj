@@ -37,6 +37,7 @@
 		18D91627158796E90023AFD7 /* FestivalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D91626158796E90023AFD7 /* FestivalViewController.m */; };
 		18D9162A158797010023AFD7 /* SpectacleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D91629158797010023AFD7 /* SpectacleViewController.m */; };
 		CE720D0415ACF5FB0066C0C8 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE720D0315ACF5FB0066C0C8 /* libz.dylib */; };
+		CEB3C0A915ADBD20001B7261 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB3C0A815ADBD20001B7261 /* NSData+Base64.m */; };
 		CEDD4ABB15AD0B1F008B1983 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CE815ACF44A0066C0C8 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CEDD4ABC15AD0B1F008B1983 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CEB15ACF44A0066C0C8 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CEDD4ABD15AD0B1F008B1983 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CED15ACF44A0066C0C8 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -114,6 +115,8 @@
 		CE720CF915ACF44A0066C0C8 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
 		CE720CFA15ACF44A0066C0C8 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
 		CE720D0315ACF5FB0066C0C8 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		CEB3C0A715ADBD20001B7261 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		CEB3C0A815ADBD20001B7261 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		CEDD4AC315AD0C2A008B1983 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		CEDD4AC415AD0C2A008B1983 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +179,8 @@
 		18D1278D15683115007EBE28 /* ConcertFinderMobile */ = {
 			isa = PBXGroup;
 			children = (
+				CEB3C0A715ADBD20001B7261 /* NSData+Base64.h */,
+				CEB3C0A815ADBD20001B7261 /* NSData+Base64.m */,
 				CEDD4AC315AD0C2A008B1983 /* Reachability.h */,
 				CEDD4AC415AD0C2A008B1983 /* Reachability.m */,
 				CE720CE715ACF44A0066C0C8 /* ASIAuthenticationDialog.h */,
@@ -359,6 +364,7 @@
 				1842E7D9158BA83500CB054B /* MasterTabController.m in Sources */,
 				185003C615AB81E80049E44B /* Event.m in Sources */,
 				CEDD4AC515AD0C2A008B1983 /* Reachability.m in Sources */,
+				CEB3C0A915ADBD20001B7261 /* NSData+Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

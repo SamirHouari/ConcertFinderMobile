@@ -8,6 +8,7 @@
 
 #import "CFinderDetailViewController.h"
 #import "Event.h"
+#import "NSData+Base64.h"
 
 @interface CFinderDetailViewController ()
 - (void)configureView;
@@ -47,6 +48,8 @@
                           [e pays]];
     descLabel.text = [e desc];
     
+    NSData *data = [NSData dataFromBase64String:[e img]];
+    eventImage.image = [UIImage imageWithData:data];
     
     //NSData *d = [[NSData alloc] i];
     //UIImage *img = [[UIImage alloc] initWithData:<#(NSData *)#>];
