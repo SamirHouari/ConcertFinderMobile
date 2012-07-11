@@ -1,54 +1,28 @@
 //
-//  CFinderAppDelegate.m
-//  ConcertFinderMobile
+//  CFAppDelegate.m
+//  ConcertFinder
 //
-//  Created by Samir Houari on 19/05/12.
+//  Created by Samir Houari on 10/07/12.
 //  Copyright (c) 2012 Epita. All rights reserved.
 //
 
-#import "CFinderAppDelegate.h"
+#import "CFAppDelegate.h"
 
-#import "CFinderMasterViewController.h"
-#import "Event.h"
+#import "CFMasterViewController.h"
 
-@implementation CFinderAppDelegate
+@implementation CFAppDelegate
 
 @synthesize window = _window;
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
-
-- (void)grabURLInBackground
-{
-    NSURL *url = [NSURL URLWithString:@"http://192.168.1.86:80/ConcertFinder/ConcertFinderService.asmx/GetXEvents"];
-    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-    [request setDelegate:self];
-    [request startAsynchronous];
-}
-
-- (void)requestFinished:(ASIHTTPRequest *)request
-{
-    NSString *responseString = [request responseString];
-    NSData *responseData = [request responseData];
-}
-
-- (void)requestFailed:(ASIHTTPRequest *)request
-{
-    NSError *error = [request error];
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-<<<<<<< HEAD
-    [self grabURLInBackground];
-=======
-    NSString *filePath = @"/Users/samirhouari/plist_example.plist";
-    NSMutableDictionary* plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
-    [self updatedb:plistDict];
->>>>>>> 8877ed72af2b02f00680645ba7d967ba4bf26396
-    
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    CFMasterViewController *controller = (CFMasterViewController *)navigationController.topViewController;
+    controller.managedObjectContext = self.managedObjectContext;
     return YES;
 }
 							
@@ -139,7 +113,7 @@
     {
         return __managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"ConcertFinderMobile" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"ConcertFinder" withExtension:@"momd"];
     __managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return __managedObjectModel;
 }
@@ -155,7 +129,7 @@
         return __persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"ConcertFinderMobile.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"ConcertFinder.sqlite"];
     
     NSError *error = nil;
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
@@ -199,36 +173,6 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
-}
-
-- (void )updatedb:(NSDictionary *) dict
-{
-    NSArray *content = [dict objectForKey:@"Datas"];
-    // NSLog(@"\n\n\n Desc is: %@ \n\n\n\n\n",[content debugDescription]);
-    int len = [content count];
-    
-        for (int i = 0; i < len; i++) 
-        {
-            NSMutableDictionary* itemdict = [[NSMutableDictionary alloc] initWithDictionary:[content objectAtIndex:i]];
-             Event *e = (Event *)[NSEntityDescription insertNewObjectForEntityForName:@"Event" inManagedObjectContext:__managedObjectContext];
-            e.ev_id = [itemdict objectForKey:@"Id"];
-            e.date_begin = [itemdict objectForKey:@"DateDebut"];
-            e.type = [itemdict objectForKey:@"Type"];
-            e.img = [itemdict objectForKey:@"Image"];
-            e.latitude = [itemdict objectForKey:@"Latitude"];
-            e.longitude = [itemdict objectForKey:@"Longitude"];
-            e.name = [itemdict objectForKey:@"Name"];
-            e.rue = [itemdict objectForKey:@"Rue"];
-            e.ville = [itemdict objectForKey:@"Ville"];
-            e.cp = [itemdict objectForKey:@"CP"];
-            e.pays = [itemdict objectForKey:@"Pays"];
-            NSError *error = nil;
-            if (![__managedObjectContext save:&error]) {
-                // Handle the error.
-                NSLog(@"Problem in adding an object CFFinderAppDelegate");
-            }
-
-        }
 }
 
 @end
