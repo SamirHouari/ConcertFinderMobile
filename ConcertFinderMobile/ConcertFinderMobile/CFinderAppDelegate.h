@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "ASIHTTPRequest.h"
+#import "ASIFormDataRequest.h"
 
 @interface CFinderAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -25,8 +25,8 @@
 
 
 - (void)grabURLInBackground;
-- (void)requestFinished:(ASIHTTPRequest *)request;
-- (void)requestFailed:(ASIHTTPRequest *)request;
+- (void)requestFinished:(ASIFormDataRequest *)request;
+- (void)requestFailed:(ASIFormDataRequest *)request;
 
 
 @end

@@ -21,33 +21,43 @@
 
 - (void)grabURLInBackground
 {
-    NSURL *url = [NSURL URLWithString:@"http://192.168.1.86:80/ConcertFinder/ConcertFinderService.asmx/GetXEvents"];
-    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    NSURL *url = [NSURL URLWithString:@"http://10.41.176.146:80/ConcertFinderMVC/ConcertFinderService.asmx/GetXEvents"];
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
     [request setDelegate:self];
     [request startAsynchronous];
+    [request setPostValue:@"2" forKey:@"nb_event"];
 }
 
-- (void)requestFinished:(ASIHTTPRequest *)request
+- (void)requestFinished:(ASIFormDataRequest *)request
 {
-    NSString *responseString = [request responseString];
+    //NSString *responseString = [request responseString];
     NSData *responseData = [request responseData];
+    NSString *error;
+    NSPropertyListFormat format;
+    NSDictionary* plist = [NSPropertyListSerialization propertyListFromData:responseData mutabilityOption:NSPropertyListMutableContainersAndLeaves format:&format errorDescription:&error];
+    NSLog(@"plist is %@", plist);
+    if (!plist){
+        NSLog(@"Error: %@", error);
+        [error release];
+    }
+    NSMutableDictionary* plistDict = [[NSMutableDictionary alloc] initWithDictionary:plist];
+    [self updatedb:plistDict];
 }
 
-- (void)requestFailed:(ASIHTTPRequest *)request
+- (void)requestFailed:(ASIFormDataRequest *)request
 {
-    NSError *error = [request error];
+    //NSError *error = [request error];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-<<<<<<< HEAD
+
     [self grabURLInBackground];
-=======
-    NSString *filePath = @"/Users/samirhouari/plist_example.plist";
-    NSMutableDictionary* plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
-    [self updatedb:plistDict];
->>>>>>> 8877ed72af2b02f00680645ba7d967ba4bf26396
+
+    //NSString *filePath = @"/Users/samirhouari/plist_example.plist";
+    //NSMutableDictionary* plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
+    //[self updatedb:plistDict];
     
     return YES;
 }

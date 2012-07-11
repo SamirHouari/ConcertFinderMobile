@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="10K549" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11D50" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Event" representedClassName="Event" syncable="YES">
         <attribute name="cp" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="date_begin" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="date_end" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="date_begin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date_end" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ev_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fav" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="img" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pays" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rue" optional="YES" attributeType="String" syncable="YES"/>
