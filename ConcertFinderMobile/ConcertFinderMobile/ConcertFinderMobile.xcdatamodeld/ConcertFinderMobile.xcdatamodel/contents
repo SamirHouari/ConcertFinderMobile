@@ -17,12 +17,12 @@
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ville" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <fetchRequest name="concert" entity="Event" predicateString="type CONTAINS &quot;Concert&quot;"/>
+    <fetchRequest name="concert" entity="Event" predicateString="type == &quot;\&quot;Concert\&quot;&quot;"/>
     <fetchRequest name="favconcert" entity="Event" predicateString="type CONTAINS &quot;Concert&quot; AND fav == 1"/>
     <fetchRequest name="favfestival" entity="Event" predicateString="type CONTAINS &quot;Festival&quot; AND fav == 1"/>
     <fetchRequest name="favspectacle" entity="Event" predicateString="type CONTAINS &quot;Spectacle&quot; AND fav == 1"/>
-    <fetchRequest name="festival" entity="Event" predicateString="type CONTAINS &quot;Festival&quot;"/>
-    <fetchRequest name="spectacle" entity="Event" predicateString="type CONTAINS &quot;Spectacle&quot;"/>
+    <fetchRequest name="festival" entity="Event" predicateString="type == &quot;\&quot;Festival\&quot;&quot;"/>
+    <fetchRequest name="spectacle" entity="Event" predicateString="type == &quot;\&quot;Spectacle\&quot;&quot;"/>
     <elements>
         <element name="Event" positionX="261" positionY="189" width="128" height="270"/>
     </elements>

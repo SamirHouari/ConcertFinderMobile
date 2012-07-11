@@ -229,14 +229,15 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[managedObject valueForKey:@"name"] description];
+    cell.detailTextLabel.text = [[managedObject valueForKey:@"name"] description];
+    cell.textLabel.text = [[managedObject valueForKey:@"name"] name];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"ssegue"]) {
         CFinderDetailViewController *detailViewController = [segue destinationViewController];
-        [detailViewController setDetailItem:[eventsArray objectAtIndex:[self.tableView indexPathForSelectedRow].row]];
+        [detailViewController setDetailevent:[self.eventsArray objectAtIndex:[self.tableView indexPathForSelectedRow].row]];
     }
 }
 

@@ -25,7 +25,7 @@
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
     [request setDelegate:self];
     [request startAsynchronous];
-    [request setPostValue:@"5" forKey:@"nb_event"];
+    [request setPostValue:@"3" forKey:@"nb_event"];
 }
 
 - (void)requestFinished:(ASIFormDataRequest *)request
@@ -222,12 +222,13 @@
             NSMutableDictionary* itemdict = [[NSMutableDictionary alloc] initWithDictionary:[content objectAtIndex:i]];
              Event *e = (Event *)[NSEntityDescription insertNewObjectForEntityForName:@"Event" inManagedObjectContext:__managedObjectContext];
             e.ev_id = [itemdict objectForKey:@"Id"];
+            e.desc = [itemdict objectForKey:@"Description"];
             e.date_begin = [itemdict objectForKey:@"DateDebut"];
             e.type = [itemdict objectForKey:@"Type"];
             e.img = [itemdict objectForKey:@"Image"];
             e.latitude = [itemdict objectForKey:@"Latitude"];
             e.longitude = [itemdict objectForKey:@"Longitude"];
-            e.name = [itemdict objectForKey:@"Name"];
+            e.titre = [itemdict objectForKey:@"Titre"];
             e.rue = [itemdict objectForKey:@"Rue"];
             e.ville = [itemdict objectForKey:@"Ville"];
             e.cp = [itemdict objectForKey:@"CP"];

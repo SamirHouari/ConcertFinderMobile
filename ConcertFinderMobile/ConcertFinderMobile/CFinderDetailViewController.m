@@ -33,15 +33,23 @@
     [self configureView];
 }
 
+- (void)setSighting:(Event *) newEvent 
+{
+    if (detailevent != newEvent) {
+        detailevent = newEvent;
+        // Update the view.
+        [self configureView];
+    }
+}
+
 - (void)configureView
 {
     // Update the user interface for the detail item.
-    Event *e =(Event *) detailItem;
+    Event *e = detailevent;
     
-    titleLabel.text = [e name];
-    dateLabel.text = [NSString stringWithFormat:@"%@ : %@",
-                      [e date_begin],
-                      [e date_end]];
+    titleLabel.text = [e titre];
+    dateLabel.text = [NSString stringWithFormat:@"%@",
+                      [e date_begin]];
     locationLabel.text = [NSString stringWithFormat:@"%@ : %@ : %@",
                           [e rue],
                           [e ville],
