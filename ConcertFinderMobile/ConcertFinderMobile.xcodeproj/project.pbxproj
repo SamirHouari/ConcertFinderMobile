@@ -145,9 +145,9 @@
 		18D1277615683115007EBE28 = {
 			isa = PBXGroup;
 			children = (
-				CE720D0315ACF5FB0066C0C8 /* libz.dylib */,
 				18D1278D15683115007EBE28 /* ConcertFinderMobile */,
 				18D1278415683115007EBE28 /* Frameworks */,
+				CE720D0315ACF5FB0066C0C8 /* libz.dylib */,
 				18D1278215683115007EBE28 /* Products */,
 			);
 			sourceTree = "<group>";

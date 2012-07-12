@@ -21,7 +21,7 @@
 
 - (void)grabURLInBackground
 {
-    NSURL *url = [NSURL URLWithString:@"http://192.168.1.130:80/ConcertFinderMVC/ConcertFinderService.asmx/GetXEvents"];
+    NSURL *url = [NSURL URLWithString:@"http://79.87.25.27:6060/ConcertFinderMVC/ConcertFinderService.asmx/GetXEvents"];
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
     [request setDelegate:self];
     [request startAsynchronous];

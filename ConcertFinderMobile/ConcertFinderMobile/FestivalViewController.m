@@ -44,6 +44,8 @@
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"festival"];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:managedObjectContext];
     [request setEntity:entity];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"type == %@", @"Festival"];
+    [request setPredicate:predicate];
     NSError *error = nil;
     NSMutableArray *mutableFetchResults = [[managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
     if (mutableFetchResults == nil) {
