@@ -17,7 +17,7 @@
 @synthesize managedObjectContext;
 @synthesize eventsArray;
 @synthesize fetchedResultsController = __fetchedResultsController;
-
+@synthesize SearchBar;
 
 - (void)viewDidLoad 
 { 
@@ -242,5 +242,43 @@
         [detailViewController setDetailevent:[self.eventsArray objectAtIndex:[self.tableView indexPathForSelectedRow].row]];
     }
 }
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self handleSearch:searchBar];
+}
 
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+    [self handleSearch:searchBar];
+}
+
+- (void)handleSearch:(UISearchBar *)searchBar {
+    NSLog(@"User searched for %@", searchBar.text);
+    CFinderAppDelegate *delegate = (CFinderAppDelegate *) [[UIApplication sharedApplication] delegate];
+    managedObjectContext = delegate.managedObjectContext;
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:managedObjectContext];
+    [request setEntity:entity];
+    NSPredicate *predicate;
+    if ([searchBar.text length] != 0) {
+        
+        predicate = [NSPredicate predicateWithFormat:@"(type == %@) AND (titre contains[c] %@)", @"Spectacle",searchBar.text];
+    }
+    else {
+        predicate = [NSPredicate predicateWithFormat:@"type == %@", @"Spectacle"]; 
+    }
+    [request setPredicate:predicate];
+    NSError *error = nil;
+    NSMutableArray *mutableFetchResults = [[managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
+    if (mutableFetchResults == nil) {
+        // Handle the error.
+    }
+    [eventsArray removeAllObjects];
+    self.eventsArray = mutableFetchResults;
+    [[self tableView] reloadData];
+    [searchBar resignFirstResponder]; // if you want the keyboard to go away
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *) searchBar {
+    NSLog(@"User canceled search");
+    [searchBar resignFirstResponder]; // if you want the keyboard to go away
+}
 @end

@@ -27,6 +27,6 @@
 - (void)grabURLInBackground;
 - (void)requestFinished:(ASIFormDataRequest *)request;
 - (void)requestFailed:(ASIFormDataRequest *)request;
-
+- (int)getLastId;
 
 @end

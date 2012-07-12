@@ -18,14 +18,43 @@
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
-
 - (void)grabURLInBackground
 {
-    NSURL *url = [NSURL URLWithString:@"http://79.87.25.27:6060/ConcertFinderMVC/ConcertFinderService.asmx/GetXEvents"];
+    NSURL *url = [NSURL URLWithString:@"http://79.87.25.27:6060/ConcertFinderMVC/ConcertFinderService.asmx/HighestId"];
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    NSString *max = [NSString stringWithFormat:@"%d", [self getLastId]];
     [request setDelegate:self];
     [request startAsynchronous];
-    [request setPostValue:@"3" forKey:@"nb_event"];
+    [request setPostValue:max forKey:@"id"];
+}
+
+- (int)getLastId
+{
+    CFinderAppDelegate *delegate = (CFinderAppDelegate *) [[UIApplication sharedApplication] delegate];
+    __managedObjectContext = delegate.managedObjectContext;
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:__managedObjectContext];
+    [request setEntity:entity];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"ev_id" ascending:NO];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+    [request setSortDescriptors:sortDescriptors];
+    [sortDescriptors release];
+    [sortDescriptor release];
+    
+    [request setFetchLimit:1];
+    NSError *error = nil;
+    NSArray *results = [__managedObjectContext executeFetchRequest:request error:&error];
+    [request release];
+    if (results == nil) {
+        NSLog(@"error fetching the results: %@",error);
+    }
+    
+    NSInteger maximumValue = 0;
+    if (results.count == 1) {
+        Event *result = (Event*)[results objectAtIndex:0];
+        maximumValue =  [result.ev_id integerValue];
+    }
+    return maximumValue;
 }
 
 - (void)requestFinished:(ASIFormDataRequest *)request
@@ -52,7 +81,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-
+    
     [self grabURLInBackground];
 
     //NSString *filePath = @"/Users/samirhouari/plist_example.plist";
