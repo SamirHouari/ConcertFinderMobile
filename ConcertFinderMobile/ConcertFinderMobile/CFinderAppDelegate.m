@@ -20,12 +20,22 @@
 
 - (void)grabURLInBackground
 {
-    NSURL *url = [NSURL URLWithString:@"http://79.87.25.27:6060/ConcertFinderMVC/ConcertFinderService.asmx/HighestId"];
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"serverFile" 
+                                                     ofType:@"txt"];
+    NSString* serverAdress = [NSString stringWithContentsOfFile:path
+                                                  encoding:NSUTF8StringEncoding
+                                                     error:NULL];
+    if ([serverAdress length] != 0)
+    {
+    serverAdress = [serverAdress stringByAppendingString:@"/ConcertFinderMVC/ConcertFinderService.asmx/HighestId"];
+
+    NSURL *url = [NSURL URLWithString:serverAdress];
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
     NSString *max = [NSString stringWithFormat:@"%d", [self getLastId]];
     [request setDelegate:self];
     [request startAsynchronous];
     [request setPostValue:max forKey:@"id"];
+    }
 }
 
 - (int)getLastId

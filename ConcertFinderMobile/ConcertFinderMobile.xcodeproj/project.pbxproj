@@ -37,6 +37,7 @@
 		18D91627158796E90023AFD7 /* FestivalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D91626158796E90023AFD7 /* FestivalViewController.m */; };
 		18D9162A158797010023AFD7 /* SpectacleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D91629158797010023AFD7 /* SpectacleViewController.m */; };
 		CE720D0415ACF5FB0066C0C8 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE720D0315ACF5FB0066C0C8 /* libz.dylib */; };
+		CE8E331115AF086C002EA0DD /* serverFile.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8E331015AF086B002EA0DD /* serverFile.txt */; };
 		CEB3C0A915ADBD20001B7261 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB3C0A815ADBD20001B7261 /* NSData+Base64.m */; };
 		CEDD4ABB15AD0B1F008B1983 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CE815ACF44A0066C0C8 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CEDD4ABC15AD0B1F008B1983 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = CE720CEB15ACF44A0066C0C8 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -115,6 +116,7 @@
 		CE720CF915ACF44A0066C0C8 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
 		CE720CFA15ACF44A0066C0C8 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
 		CE720D0315ACF5FB0066C0C8 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		CE8E331015AF086B002EA0DD /* serverFile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = serverFile.txt; sourceTree = "<group>"; };
 		CEB3C0A715ADBD20001B7261 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		CEB3C0A815ADBD20001B7261 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		CEDD4AC315AD0C2A008B1983 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				1853BABC15879E4B007F63E7 /* FavConcertViewController.m */,
 				1853BABE15879E6C007F63E7 /* FavSpectacleViewController.h */,
 				1853BABF15879E6C007F63E7 /* FavSpectacleViewController.m */,
+				CE8E331015AF086B002EA0DD /* serverFile.txt */,
 			);
 			path = ConcertFinderMobile;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				18B2F1911588E2EC001659A5 /* theater-icon.png in Resources */,
 				18B2F1931588E4D0001659A5 /* microphone-icon.png in Resources */,
 				18B2F1951588E4FD001659A5 /* guitar-icon.png in Resources */,
+				CE8E331115AF086C002EA0DD /* serverFile.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
